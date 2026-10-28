@@ -1,0 +1,23 @@
+[project]
+name = "dl-el"
+version = "0.1.0"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "gradio>=5,<7",
+    "open-clip-torch>=2.32,<4",
+    "opencv-python-headless>=4.10,<5",
+    "python-dotenv>=1.2.4",
+    "torch>=2.6,<3",
+    "torchvision>=0.21,<1",
+    "typesafe-sdk>=0.7.5,<1",
+    "ultralytics>=8.3,<9",
+]
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu128" }
+torchvision = { index = "pytorch-cu128" }
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
